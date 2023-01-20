@@ -1,0 +1,44 @@
+==== How to test the FTP Server ====
+1. Open FTP-Server.pkt file in Cisco Packet Tracer.
+2. Select PC1 to display its interface.
+3. Goto the Desktop Tab and run the Text Editor app.
+4. Type any message you prefer in the Text Editor.
+5. Close the Text Editor to save your text document.
+6. Click Save in the pop-up window.
+7. Provide a filename with the filename extension. (eg: hello.txt) and click ok to save.
+8. Open Command Prompt in Packet Tracer.
+9. Ping the FTP Server by typing: ping 10.10.10.2 (and hit the Enter key on your keyboard).
+10. Repeat step 9 if you receive a Request timed out message.
+
+NB. Ping command is used to check whether a host is up and running on a network. 
+
+11. Type: ftp (in command prompt and press enter to see the ftp command usage)
+12. Now type: ftp 10.10.10.2 [press enter]
+13. Provide the username (Username is: cisco) and [press enter]
+14. Provide the password (Password is: cisco)
+
+NB. Password is not visible when entering/typing the password, press enter when done to login.
+
+=== Uploading Stage ====
+- Type: dir (and press Enter to list all files on the FTP Server. You can confirm the hello.txt file created in step 7 is not in the list)
+- We can now upload the text file to the FTP Server by typing the command: put hello.txt (and hit enter)
+- Now type: dir (to see a list of all files and this time you'll see the hello.txt file)
+>>>>>>>>>>>>>>>>>> UPLOAD COMPLETE! <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+==== Downloading Stage ====
+- Close PC1 Command Prompt and exit PC1 interface.
+- Launch PC2.
+- Goto Desktop and Launch Command Prompt.
+- First let confirm that we don't have the hello.txt file on PC2.
+- We can do that by typing: dir (in command prompt and press Enter)
+- Connect to the FTP Server by typing: ftp 10.10.10.2 (and press Enter)
+- Provide the username (Username is: cisco) [and press Enter]
+- Provide the password (Password is: cisco)
+
+NB. (Password is not visible when entering/typing your password, [press enter] when done to login.)
+
+- Download the hello.txt file from the FTP Server by running the command: get hello.txt [press enter]
+- Exit the FTP Server by typing: quit [press Enter]
+- You can confirm the download by typing: dir (in command prompt to list all your files in your directory)
+- You should see the **hello.txt** file in your directory.

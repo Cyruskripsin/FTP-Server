@@ -1,0 +1,48 @@
+Below is the configuration for the FTP-Server.
+I have already configured the FTP Server with these configurations so there's no need to do it again.
+
+# This serves as a guide to those wanting to create similar projects from scratch.
+
+====== ISR4331 Router Configuration ======
+1. Click the Router to inspect it.
+2. Select the config tab.
+3. Under INTERFACE tab, select GigabitEthernet0/0/0
+4. Make sure Port Status is on, Bandwidth and Duplex is set to auto.
+5. In the IP Configuration section, provide an IP address: 10.10.10.1
+6. A Subnet Mask will be provided automatically by clicking the Subnet Mask field.
+7. Select GigabitEthernet0/0/1 below GigabitEthernet0/0/0 in the INTERFACE tab.
+8. Make sure Port Status is on, Bandwidth and Duplex is set to auto.
+9. In the IP Configuration section, provide an IP address: 192.168.0.1
+10. A Subnet Mask will be provided automatically by clicking the Subnet Mask field
+11. Exit the Router Interface to save changes.
+
+
+====== PC-PT PC1 Configuration =====
+1. Click PC-PT PC1 icon to open its interface.
+2. Goto the Desktop Tab and select IP Configuration.
+3. Set the IP Address to: 192.168.0.2
+4. A Subnet Mask will be provided automatically by clicking the Subnet Mask field.
+5. Configure the Default Gateway by specifying: 192.168.0.1 in the field.
+6. Close the IP Configuration Window and exit PC1 interface to save changes made.
+
+
+====== PC-PT PC2 Configuration =====
+1. Click PC-PT PC2 icon to open its interface.
+2. Goto the Desktop Tab and select IP Configuration.
+3. Set the IP Address to: 192.168.0.3
+4. A Subnet Mask will be provided automatically by clicking the Subnet Mask field.
+5. Configure the Default Gateway by specifying: 192.168.0.1 in the field.
+6. Close IP Configuration Window and exit PC2 interface to save changes made.
+
+
+==== Server PT Server 1 Configuration ====
+1. Click the Server to open the Server's interface.
+2. Goto the Desktop Tab and select IP Configuration.
+3. Set the IP Address to: 10.10.10.2
+4. A Subnet Mask will be provided automatically by clicking the Subnet Mask field.
+5. Configure the Default Gateway by specifying: 10.10.10.1 in the field.
+6. Close IP Configuration Window to save changes made.
+7. Goto to the config tab and rename Sever1 to FTP Server.
+8. Move to the Services Tab and select FTP under SERVICES.
+9. You can setup a custom Username and Password or use the default settings.
+10. Enable: Read, Write, Delete, Rename and List (RWDNL) options by checking their checkbox to get full access on the FTP Server.
